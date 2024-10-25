@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/microocppsimulator-dev-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/microocppsimulator-dev-task:2",
     "containerDefinitions": [
         {
             "name": "microocppsimulator",
@@ -36,9 +36,10 @@
         }
     ],
     "family": "microocppsimulator-dev-task",
+    "taskRoleArn": "arn:aws:iam::159623514083:role/TaskIAMRole",
     "executionRoleArn": "arn:aws:iam::159623514083:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -56,6 +57,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -84,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-25T11:12:09.026Z",
+    "registeredAt": "2024-10-25T11:38:33.298Z",
     "registeredBy": "arn:aws:iam::159623514083:root",
     "enableFaultInjection": false,
     "tags": []
